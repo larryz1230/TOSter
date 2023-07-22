@@ -17,10 +17,16 @@ code {
 }
 
 .home-section {
-  height: 100%;
+  height: 200%;
+  margin: 0;
   position: relative;
-  z-index: -1;
-  background-image: url(./Assets/home-bkgd.jpg);
+  z-index: 1;
+  background-image: linear-gradient(
+      to left,
+      rgb(255, 209, 135),
+      rgb(255, 136, 0, 0.1)
+    ),
+    url(./Assets/home-bkgd.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -32,39 +38,62 @@ code {
   text-align: left;
 }
 .heading {
-  font-size: 2.4em !important;
+  color: #ffe9c9;
+  font-size: 4em !important; /* originally 2.4 em */
   padding-left: 50px !important;
-  font: "Courier New"
+  font-family: 'Courier New';
 }
 
 .heading-name {
-  font-size: 2.5em !important;
+  color: #ffe9c9;
+  font-size: 3em !important; /* originally 2.5 em */
   padding-left: 45px !important;
+  font-family: "Times New Roman";
 }
 
 .main-name {
-  color: #ff7000;
+  color: #f9c87c;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #ff7000 !important;
+  color: #f9c87c !important; /*#f9c87c */
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #ff7000 !important;
+  color: #f9c87c !important;
+ 
 }
 
-.button-container {
+.button-container-primary {
+  display: block;
+  width: 400px;
+  height: 200px;
+  margin: 50px auto;
+  position: relative;
+  padding: 20px;
+  right: 200px;
+  border-radius:24px;
+  font-size: 32px;
+}
+
+.button-container-secondary {
   display: block;
   width: 200px;
-  margin: 50px auto;
+  margin: 70px auto;
+  position: relative;
+  padding: 20px;
+  left: 300px;
+  bottom: 270px;
+  border-radius:24px;
+  
 }
 
 button {
   display: block;
   cursor: pointer;
+  position: relative;
   width: 200px;
   border-radius: 40px;
   border: none;
@@ -77,3 +106,5 @@ button {
       #56E3FA
   );
 }
+
+

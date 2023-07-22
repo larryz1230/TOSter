@@ -3,20 +3,20 @@ import { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
-import homeLogo from "../../Assets/toast.jpg";
+import homeLogo from "../../Assets/transparent-toast.png";
 
 function Home() {
 
   function handleUpload() {
-    window.location.href = 'http://localhost:3000/upload'
+    window.location.href = '/upload'
   }
 
   function handleSearch() {
-    window.location.href = 'http://localhost:3000/search'
+    window.location.href = '/search'
   }
 
   function handleResults() {
-    window.location.href = 'http://localhost:3000/results'
+    window.location.href = '/results'
   }
 
   return (
@@ -60,19 +60,21 @@ function Home() {
               </Col>
             }
           </Row>
-
           
         </Container>
-       
-        <button className = 'button-container' onClick = {handleUpload}>Get Started</button>
       
-    
-          <button className = 'button-container' onClick = {handleSearch}>Search</button>
-          
-      </Container>
-  
+        <button className = 'button-container-primary' onClick = {handleUpload}>Get Started</button>
+      
    
-     </section>
+      <button className = 'button-container-secondary' onClick = {handleSearch}>Search</button>
+      
+      <button className = 'button-container-secondary' onClick = {handleResults}>Results</button>
+  
+      </Container>
+   
+  
+      </section>
+     
 
     </>
   );
