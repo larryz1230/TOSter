@@ -13,9 +13,6 @@ const Upload = ({ onResponseArrayChange }) => {
 
   const [input, setInput] = useState('');
   const [c_input, setC] = useState('');
-  const [response, setResponse] = useState("");
-  const [response1, setResponse1] = useState("");
-  const [response2, setResponse2] = useState("");
   const [responseArray, setResponseArray] = useState([]);
 
   const configuration = new Configuration({
@@ -43,13 +40,11 @@ const Upload = ({ onResponseArrayChange }) => {
       const sentences = text.split('- ');
 
     // // Create a new array where each index corresponds to a step
-    const stepsArray = sentences.map((sentence, index) => `Step ${index}: ${sentence}`);
+    const stepsArray = sentences.map((sentence, index) => `${index}. ${sentence}`);
     stepsArray.shift();
 
     // // Output the array
-    // console.log(sentences);
-
-    setResponse(stepsArray);
+    console.log(stepsArray);
 
 
       optOut();
@@ -61,9 +56,7 @@ const Upload = ({ onResponseArrayChange }) => {
         messages: [{role: "user", content: `how can delete: ${c_input} account in less than 5 steps`}]
       });
   
-    //   console.log(res.data.choices[0].message.content);
-      setResponse1(res.data.choices[0].message.content);
-
+      console.log(res.data.choices[0].message.content);
       rateSafety();
   }
 
@@ -73,8 +66,7 @@ const Upload = ({ onResponseArrayChange }) => {
         messages: [{role: "user", content: `Based on historical information and general perception, rate ${c_input}'s privacy safety on a scale from 1 to 10, giving only a numerical response`}]
       });
   
-    //   console.log(res.data.choices[0].message.content);
-      setResponse2(res.data.choices[0].message.content);
+      console.log(res.data.choices[0].message.content);
   }
 
   const handleSubmit  = async (e) => {
@@ -82,7 +74,7 @@ const Upload = ({ onResponseArrayChange }) => {
     getSummary();
     // console.log(c_input);
     // optOut();
-    document.getElementById('rec').style.display = "block";
+    // document.getElementById('rec').style.display = "block";
   }
   
   const handleInputChange = (event) => {
