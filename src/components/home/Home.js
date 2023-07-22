@@ -1,7 +1,10 @@
 import React from "react";
+import { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
+import './button.css';
+
 
 function Home() {
 
@@ -18,7 +21,7 @@ function Home() {
   }
 
   return (
-
+    <>
      <section>
        <Container fluid className="home-section" id="home">
          <Particle />
@@ -50,20 +53,26 @@ function Home() {
           </Row>
         </Container>
        </Container>
-      <Container> 
-        <button onClick = {handleUpload}>Get Started</button>
-        </Container>
-     
-        <div>
-        <button onClick = {handleSearch}>Search</button>
-        </div>
-
-        <div>
-        <button onClick = {handleResults}>Results</button>
-        </div>
+      
         
      </section>
 
+     <section>
+      <Container> 
+     
+        <button className = 'button-container' onClick = {handleUpload}>Get Started</button>
+        </Container>
+      
+        <div>
+        <button className = 'button-container'onClick = {handleSearch}>Search</button>
+        </div>
+
+        <div>
+        <button className = 'button-container' onClick = {handleResults}>Results</button>
+        </div>
+        
+     </section>
+     </>          
      
   );
 }
