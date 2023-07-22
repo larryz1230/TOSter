@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+.opacity-background {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 24px;
+ 
+
+}
+
 .home-header {
   padding-top: 80px !important;
 }
@@ -32,14 +39,14 @@ code {
   text-align: left;
 }
 .heading {
-  color: #ffe9c9;
+  color: black;
   font-size: 4em !important; /* originally 2.4 em */
   /*padding-left: 50px !important;*/
   font-family: "Courier New";
 }
 
 .heading-name {
-  color: #ffe9c9;
+  color: black;
   font-size: 3em !important; /* originally 2.5 em */
   /*padding-left: 45px !important;*/
   font-family: "Times New Roman";

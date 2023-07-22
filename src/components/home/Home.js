@@ -29,7 +29,7 @@ function Home() {
             <Row>
               <Col
                 md={7}
-                className="home-header">
+                className="home-header opacity-background">
                 <h1
                   style={{ paddingBottom: 15 }}
                   className="heading">
