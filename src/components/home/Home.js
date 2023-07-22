@@ -39,7 +39,7 @@ function Home() {
     // </section>
 
     <div>
-        Hi
+        Home
     </div>
   );
 }
