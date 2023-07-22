@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
+import homeLogo from "../../Assets/toast.jpg";
 
 function Home() {
   return (
@@ -63,16 +64,18 @@ function Home() {
               </div>
             </Col>
 
-            {/*<Col
-              md={5}
-              style={{ paddingBottom: 20 }}>
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
-              />
-  </Col>*/}
+            {
+              <Col
+                md={5}
+                style={{ paddingBottom: 20 }}>
+                <img
+                  src={homeLogo}
+                  alt="home pic"
+                  className="img-fluid"
+                  style={{ maxHeight: "450px" }}
+                />
+              </Col>
+            }
           </Row>
         </Container>
       </Container>
