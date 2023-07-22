@@ -10,7 +10,7 @@ function Search() {
     const [comp, setComp] = useState([]);
 
     const fetchCompany = async () => {
-        const { data } = await axios.get('/api/data/');
+        const { data } = await axios.get('/api/data');
 
         console.log(data);
     }
