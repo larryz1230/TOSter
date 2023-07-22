@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import axios from 'axios';
-import GView from './Projects';
+import Gallery from './Gallery';
 import ErrorMessage from '../ErrorMessage';
 
 
@@ -74,9 +72,12 @@ function Search() {
                     </Form>
                     </Col>
                 </Row>
+
+
+                <Gallery></Gallery>
             </Container>
 
-            <GView></GView>
+            
         </>
       );
 }
