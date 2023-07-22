@@ -170,8 +170,8 @@ button {
   padding: 20px;
   border-radius: 24px;
   margin: 20px;
-  right: 80px;
-  top: 100px;
+  left: 50px;
+  bottom: 100px;
 }
 
 .upload-submit-button {
@@ -181,8 +181,7 @@ button {
   padding: 20px;
   border-radius: 24px;
   margin: 20px;
-  right: 310px;
-  bottom: 125px;
+  left: 220px;
 }
 
 .upload-company-container {
@@ -208,4 +207,5 @@ button {
   font-size: 48px;
   bottom: 125px;
 }
+
 /*End up uploads*/
