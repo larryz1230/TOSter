@@ -60,14 +60,18 @@ function Home() {
               </Col>
             }
           </Row>
+
+          
         </Container>
+       
         <button className = 'button-container' onClick = {handleUpload}>Get Started</button>
       
     
-      <button className = 'button-container' onClick = {handleSearch}>Search</button>
+          <button className = 'button-container' onClick = {handleSearch}>Search</button>
+          
       </Container>
-      
-        
+  
+   
      </section>
 
     </>
