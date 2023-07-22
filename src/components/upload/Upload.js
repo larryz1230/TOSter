@@ -15,7 +15,7 @@ const Upload = ({ onResponseArrayChange }) => {
 
   const configuration = new Configuration({
 
-    apiKey: "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",
+    apiKey: "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",
 
   });
   delete configuration.baseOptions.headers['User-Agent'];
