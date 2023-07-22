@@ -1,3 +1,21 @@
 #prompt{
     width: auto;   
 }
+
+.upload-section {
+    height: 200%;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    background-image: linear-gradient(
+        to left,
+        rgb(255, 209, 135),
+        rgb(255, 136, 0, 0.1)
+      ),
+      url(./Assets/home-bkgd.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 30px !important;
+    padding-top: 30px !important;
+  }

@@ -1,0 +1,35 @@
+#customRange3 {
+    width: 100%; /* Set the width to fill its container */
+    height: 20px; /* Set the height of the range bar */
+    background-color: #f1f1f1; /* Set the background color of the range bar */
+    border-radius: 10px; /* Add some roundness to the ends of the range bar */
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Change the track color as the user changes the input value */
+#customRange3::-moz-range-progress {
+    background-color: #007bff;
+}
+
+#customRange3::-webkit-slider-runnable-track {
+    background-color: #007bff;
+}
+
+/* Hide the default tick marks */
+#customRange3::-moz-range-track {
+    border: none;
+}
+
+#customRange3::-ms-track {
+    border: none;
+}
+
+#customRange3::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0; /* Set the width of the thumb to 0 to hide it */
+  }
+
+  #customRange3::-moz-range-thumb {
+    width: 0;
+  }
