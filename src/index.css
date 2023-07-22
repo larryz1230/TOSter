@@ -139,8 +139,8 @@ button {
   border: none;
   padding: 20px;
   font-size: 20px;
-  color: white;
-  background: linear-gradient(90deg, #9383c5, #56e3fa);
+  color: black;
+  background: linear-gradient(90deg, #eec07b, #d8c4aa);
 }
 
 
