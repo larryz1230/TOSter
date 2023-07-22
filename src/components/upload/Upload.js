@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import * as pdfjsLib from "pdfjs-dist";
 import './upload.css'
 
-//todo: add loading, parse response, send to db
+//TODO: send to db
 
 const { Configuration, OpenAIApi } = require("openai");
 const Upload = ({ onResponseArrayChange }) => {
