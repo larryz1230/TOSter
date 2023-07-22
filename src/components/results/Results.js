@@ -1,17 +1,59 @@
 import React from 'react'
+import { useEffect, useState } from "react";
 import { Container } from 'react-bootstrap';
+import Modal from './Modal';
 import './res.css'
 
-const privrating = "5";
+  
+var set = false;
 
 function Results() {
+
+    const [isCollapsed, setCollapsed] = useState(true);
+
+    const toggleCollapse = () => {
+      setCollapsed((prevCollapsed) => !prevCollapsed);
+    };
+
+    useEffect(() => {
+        // Your JavaScript code for populating the list goes here
+    
+        // Your array with values
+
+        console.log("called useeffect");
+        if (!set){
+            const myArray = [
+            "qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq",
+            "qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq",
+            "qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq",
+            "qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq",
+            "qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq"
+            ];
+        
+            // Get a reference to the ul element
+            const ul = document.getElementById("myList");
+        
+            // Loop through the array and create <li> elements with the array values
+            for (let i = 0; i < myArray.length; i++) {
+            const li = document.createElement("li");
+            li.classList.add("list-group-item");
+            li.textContent = (i + 1) + ". " + myArray[i];
+            ul.appendChild(li);
+            }
+            set = true;
+            
+        }
+      }, []); 
+
     return (
+
+        
+
         <Container fluid className='upload-background'>
             <Container>
-                <h1>Results</h1>
+                <h1>Results For: Company Name</h1>
 
-                <label for="customRange3" class="form-label">Privacy Rating: {privrating}/10</label>
-                <input disabled="true" type="range" class="form-range" min="0" max="10" step="1" id="customRange3" value={privrating}></input>
+                <Modal></Modal>
 
                 
 
@@ -19,15 +61,28 @@ function Results() {
                 <div class="card-header">
                     TOS Summary
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">1. qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq</li>
-                    <li class="list-group-item">2. qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq</li>
-                    <li class="list-group-item">3. qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq</li>
-                    <li class="list-group-item">4. qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq</li>
-                    <li class="list-group-item">5. qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq</li>
+                <ul class="list-group list-group-flush" id="myList">
+
                 </ul>
                 </div>
             </Container>
+
+            <Container>
+            <div>
+            <button className="btn btn-primary" type="button" onClick={toggleCollapse}>
+                How Can I Opt Out?
+            </button>
+
+            <div className={`collapse ${isCollapsed ? '' : 'show'}`} id="collapseExample">
+                <div className="card card-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+            </div>
+            </div>
+            </Container>
+
+
+            
         </Container>
 
     );
