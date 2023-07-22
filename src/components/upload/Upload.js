@@ -18,7 +18,7 @@ const Upload = ({ onResponseArrayChange }) => {
 
   const configuration = new Configuration({
 
-    apiKey: '',
+    apiKey: process.env.REACT_APP_OPEN_API_KEY,
 
   });
   delete configuration.baseOptions.headers['User-Agent'];
@@ -187,7 +187,6 @@ const Upload = ({ onResponseArrayChange }) => {
 
     <br></br>
     <p id="rec"> Privacy Rating: {response2}</p>
-    <p id="rec"> KEY: {process.env.REACT_APP_VAR}</p>
     </Container>
     
     </div>
