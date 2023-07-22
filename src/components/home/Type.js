@@ -7,7 +7,7 @@ function Type() {
       options={{
         strings: [
           "We Use Large Language Models",
-          "To Summarize And Review Terms of Service Agreements",
+          "To Review Terms of Service Agreements",
           "So You Don't Have To!",
         ],
         autoStart: true,

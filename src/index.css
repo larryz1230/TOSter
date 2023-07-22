@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap%27");
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -13,7 +14,7 @@ code {
 }
 
 .opacity-background {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 24px;
  
 
@@ -42,26 +43,32 @@ code {
   color: black;
   font-size: 4em !important; /* originally 2.4 em */
   /*padding-left: 50px !important;*/
-  font-family: "Courier New";
+  font-family: "Roboto";
+  padding-left: 40px;
 }
 
 .heading-name {
   color: black;
   font-size: 3em !important; /* originally 2.5 em */
-  /*padding-left: 45px !important;*/
-  font-family: "Times New Roman";
+  padding-left: 45px;
+  font-family: "Poppins";
   position: relative;
-  right: 5px;
 }
 
 .main-name {
   color: #f9c87c;
+  font-size: 64px;
+  position: relative;
+  top: 4px;
+  right: 20px;
+
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
   color: #f9c87c !important; /*#f9c87c */
   font-weight: 600 !important;
+  padding-left: 45px;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
