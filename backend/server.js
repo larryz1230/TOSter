@@ -1,13 +1,13 @@
 const express = require('express');
 const data = require('./Data/SampleData');
 const dotenv = require('dotenv');
-//const connectDB = require("./config/db");
+const connectDB = require("./config/db");
 
 const app = express();
 
 const path = require('path');
 dotenv.config({ path: path.resolve(__dirname, '.env') });
-//connectDB();
+connectDB();
 
 app.get('/', (req, res) => {
     res.send("API is running...");
