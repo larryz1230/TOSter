@@ -28,7 +28,7 @@ code {
     url(./Assets/home-bkgd.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
@@ -60,4 +60,26 @@ code {
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #f9c87c !important;
+}
+
+.button-container {
+  display: block;
+  width: 200px;
+  margin: 50px auto;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  width: 200px;
+  border-radius: 40px;
+  border: none;
+  padding: 20px;
+  font-size: 20px;
+  color: white;
+  background: linear-gradient(
+      90deg,
+      #9383c5,
+      #56E3FA
+  );
 }
