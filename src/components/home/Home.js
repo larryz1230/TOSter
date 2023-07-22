@@ -3,7 +3,7 @@ import { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
-import homeLogo from "../../Assets/toast.jpg";
+import homeLogo from "../../Assets/transparent-toast.png";
 
 function Home() {
 
