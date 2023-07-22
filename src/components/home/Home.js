@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
 
+
 function Home() {
   return (
      <section>
