@@ -2,7 +2,7 @@ const asyncHandler = require('express-async-handler')
 const Company = require('../models/companyModels');
 
 const registerCompany = asyncHandler(async (req, res) => {
-    const { company, b1, b2, b3, b4, b5, pScore } = req.body;
+    const { company, b1, b2, b3, b4, b5, pScore, optout } = req.body;
 
     const companyExists = await Company.findOne({ company });
 
@@ -19,6 +19,7 @@ const registerCompany = asyncHandler(async (req, res) => {
         b4,
         b5,
         pScore,
+        optout,
     });
 
     if (comp) {
@@ -30,6 +31,7 @@ const registerCompany = asyncHandler(async (req, res) => {
             b4: comp.b4,
             b5: comp.b5,
             pScore: comp.pScore,
+            optout: comp.optout
         })
     } else {
         res.status(400);
@@ -44,6 +46,7 @@ const registerCompany = asyncHandler(async (req, res) => {
         b4,
         b5,
         pScore,
+        optout,
     });
 });
 
@@ -61,6 +64,7 @@ const findCompany = asyncHandler(async (req, res) => {
             b4: comp.b4,
             b5: comp.b5,
             pScore: comp.pScore,
+            optout: comp.optout,
         });
     } else {
         res.status(400);
