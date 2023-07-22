@@ -3,8 +3,7 @@ import { useEffect, useRef } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
-import './button.css';
-
+import homeLogo from "../../Assets/toast.jpg";
 
 function Home() {
 
@@ -23,36 +22,46 @@ function Home() {
   return (
     <>
      <section>
-       <Container fluid className="home-section" id="home">
-         <Particle />
-         <Container className="home-content">
-           <Row>
-             <Col md={7} className="home-header">
-               <h1 style={{ paddingBottom: 15 }} className="heading">
-                 Hi There!{" "}
-               </h1>
+     <Container
+        fluid
+        className="home-section h-100"
+        id="home">
+        <Container className="home-content">
+          <Row>
+            <Col
+              md={7}
+              className="home-header">
+              <h1
+                style={{ paddingBottom: 15 }}
+                className="heading">
+                Hi There!{" "}
+              </h1>
 
-               <h1 className="heading-name">
-                 Welcome to:
-                 <strong className="main-name"> Hackathon Project</strong>
-               </h1>
+              <h1 className="heading-name">
+                Welcome to:
+                <strong className="main-name"> TOSter</strong>
+              </h1>
 
-               <div style={{ padding: 50, textAlign: "left" }}>
-                 <Type />
+              <div className="heading-navbar">
+                <Type />
               </div>
-             </Col>
+            </Col>
 
-             <Col md={5} style={{ paddingBottom: 20 }}>
-               {/* <img
-                 src={homeLogo}
-                 alt="home pic"
-                 className="img-fluid"
-                 style={{ maxHeight: "450px" }}
-               /> */}
-             </Col>
+            {
+              <Col
+                md={5}
+                style={{ paddingBottom: 20 }}>
+                <img
+                  src={homeLogo}
+                  alt="home pic"
+                  className="img-fluid"
+                  style={{ maxHeight: "400px" }}
+                />
+              </Col>
+            }
           </Row>
         </Container>
-       </Container>
+      </Container>
       
         
      </section>
@@ -62,19 +71,16 @@ function Home() {
      
         <button className = 'button-container' onClick = {handleUpload}>Get Started</button>
         </Container>
-      
-        <div>
-        <button className = 'button-container'onClick = {handleSearch}>Search</button>
-        </div>
-
-        <div>
-        <button className = 'button-container' onClick = {handleResults}>Results</button>
-        </div>
+    
+        <button className = 'button-container' onClick = {handleSearch}>Search</button>
         
-     </section>
-     </>          
-     
+
+      </section>
+    
+    </>
   );
+  
 }
+
 
 export default Home;
