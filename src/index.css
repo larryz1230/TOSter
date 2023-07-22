@@ -17,16 +17,10 @@ code {
 }
 
 .home-section {
-  height: 20%;
   margin: 0;
   position: relative;
   z-index: 1;
-  background-image: linear-gradient(
-      to left,
-      rgb(255, 209, 135),
-      rgb(255, 136, 0, 0.1)
-    ),
-    url(./Assets/home-bkgd.jpg);
+  background-image: url(./Assets/kitchen5-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -40,16 +34,14 @@ code {
 .heading {
   color: #ffe9c9;
   font-size: 4em !important; /* originally 2.4 em */
-  padding-left: 50px !important;
-  font-family: 'Courier New';
-  position: relative;
-  right: 7px;
+  /*padding-left: 50px !important;*/
+  font-family: "Courier New";
 }
 
 .heading-name {
   color: #ffe9c9;
   font-size: 3em !important; /* originally 2.5 em */
-  padding-left: 45px !important;
+  /*padding-left: 45px !important;*/
   font-family: "Times New Roman";
   position: relative;
   right: 5px;
@@ -63,13 +55,10 @@ code {
   font-size: 2.2em !important;
   color: #f9c87c !important; /*#f9c87c */
   font-weight: 600 !important;
-  position: relative;
-  left: 50px;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #f9c87c !important;
- 
 }
 
 .button-container-primary {
@@ -80,8 +69,31 @@ code {
   position: relative;
   padding: 20px;
   right: 200px;
-  border-radius:24px;
+  border-radius: 24px;
   font-size: 32px;
+  --background-color: white;
+  --border-size:2px;
+}
+
+.button-container-primary::before{
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 24px;
+  border: var(--border-size) solid var(--background-color);
+  transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.button-container-primary:hover::before,
+.button-container-primary:focus::before {
+  top: calc(var(--border-size) * -5);
+  left: calc(var(--border-size) * -5);
+  right: calc(var(--border-size) * -5);
+  bottom: calc(var(--border-size) * -5);
 }
 
 .button-container-secondary {
@@ -92,8 +104,30 @@ code {
   padding: 20px;
   left: 300px;
   bottom: 270px;
-  border-radius:24px;
-  
+  border-radius: 24px;
+  --background-color: white;
+  --border-size:2px;
+}
+
+.button-container-secondary::before{
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 24px;
+  border: var(--border-size) solid var(--background-color);
+  transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.button-container-secondary:hover::before,
+.button-container-secondary:focus::before {
+  top: calc(var(--border-size) * -3);
+  left: calc(var(--border-size) * -3);
+  right: calc(var(--border-size) * -3);
+  bottom: calc(var(--border-size) * -3);
 }
 
 button {
@@ -106,12 +140,10 @@ button {
   padding: 20px;
   font-size: 20px;
   color: white;
-  background: linear-gradient(
-      90deg,
-      #9383c5,
-      #56E3FA
-  );
+  background: linear-gradient(90deg, #9383c5, #56e3fa);
 }
+
+
 
 #preloader {
   position: fixed;
@@ -121,9 +153,10 @@ button {
   height: 100%;
   z-index: 999999;
   background-color: #0c0513;
-  background-image: url(./Assets/pre.svg);
+  background-image: url(./Assets/toaster.gif);
   background-repeat: no-repeat;
   background-position: center;
+  
 }
 
 #preloader-none {
@@ -150,7 +183,7 @@ button {
   padding-top: 30px !important;
 }
 
-/*Column on the left side*/ 
+/*Column on the left side*/
 .upload-content {
   padding: 9rem 0 2rem !important;
   text-align: left;
@@ -167,7 +200,6 @@ button {
   margin: 50px;
 }
 
-
 .choose-file-container {
   padding: 9rem 0 2rem !important;
   text-align: left;
@@ -181,7 +213,7 @@ button {
   width: 200px;
   position: relative;
   padding: 20px;
-  border-radius:24px;
+  border-radius: 24px;
   margin: 20px;
   left: 50px;
   bottom: 100px;
@@ -192,7 +224,7 @@ button {
   width: 200px;
   position: relative;
   padding: 20px;
-  border-radius:24px;
+  border-radius: 24px;
   margin: 20px;
   left: 220px;
 }
@@ -200,23 +232,19 @@ button {
 .upload-company-container {
   text-align: left;
   position: relative;
-  background-color:rgb(255, 209, 135);
+  background-color: rgb(255, 209, 135);
   bottom: 390px;
   left: 260px;
-
-
 }
 
 .upload-textform-container {
   text-align: left;
   position: relative;
   bottom: 40px;
-  
 }
 
 .upload-heading {
   font-family: "Comic Sans";
 }
-
 
 /*End up uploads*/
