@@ -11,7 +11,7 @@ function Type() {
           "So You Don't Have To!",
         ],
         autoStart: true,
-        loop: false,
+        loop: true,
         // deleteSpeed: 150,
         delay: 45,
       }}
