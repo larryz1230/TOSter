@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
+import Typewriter from "typewriter-effect";
 
 function Home() {
   return (
@@ -37,10 +38,18 @@ function Home() {
     //     </Container>
     //   </Container>
     // </section>
-
-    <div>
-        Home
-    </div>
+    <>
+      <div>Home</div>
+      <Typewriter
+        options={{
+          strings: ["TOSter", "Best Company in the wrld"],
+          autoStart: true,
+          loop: true,
+          pauseFor: 3000,
+          deleteSpeed: 100,
+        }}
+      />
+    </>
   );
 }
 
