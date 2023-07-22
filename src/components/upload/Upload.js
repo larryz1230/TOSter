@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef  } from 'react';
-import { Container } from 'react-bootstrap';
 import * as pdfjsLib from "pdfjs-dist";
-import './upload.css'
+import { Container, Row, Col } from "react-bootstrap";
+import './upload.css';
+
 
 //TODO: send to db
 
@@ -137,62 +138,78 @@ const Upload = ({ onResponseArrayChange }) => {
 
 
   return (
-    <div>
-    <Container>
-        <h1>
-            Upload
-        </h1>
-      <div className="mb-3">
-      <input
-        className="form-control"
-        type="file"
-        id="formFile"
-        style={{ maxWidth: "250px" }}
-        ref={fileInputRef}
-      />
-      <button type="button" className="btn btn-primary" onClick={handleUpload}>
-        Upload
-      </button>
-    </div>
-
-    </Container>
-
-    <br></br>
-
-    <Container>
-
+    
+    <Container fluid className = "upload-background">
       <div>
-      <form onSubmit={handleSubmit}>
-
-        <label>
-            <input type="text" placeholder='Company Name' value= {c_input} onChange={handleCin} ></input>
-        </label>
-
-        <label>
-        <textarea placeholder='Enter a prompt'   type="text" class="text-break"  cols="30" rows="10" value= {input} onChange={handleInputChange}></textarea>
-        </label>
-
-
-        
-        <button className="btn btn-primary" type="submit">Submit</button>
-      </form>
+      <Row>
+      <Col>
+      <Container className = 'upload-content'>
+     
       
-    </div>
-    </Container>
+      
+          <h1 className='upload-heading'>
+              Choose a file to upload!
+          </h1>
+        <div className="choose-file-container"> {/*was originally mb-3*/}
+        <input
+          className="form-control"
+          type="file"
+          id="formFile"
+          style={{ maxWidth: "250px" }}
+          ref={fileInputRef}
+        />
+        </div>
+        <button type="button" className="upload-upload-button" onClick={handleUpload}>
+          Upload
+        </button>
+      
+      
+      </Container>
+      </Col>
 
-    <Container>
-    <pre id="rec"> {response}</pre>
+      <br></br>
+      <Col>
+      <Container className = 'upload-form-container'>
 
-    <br></br>
-    <pre id="rec"> {response1}</pre>
+        <div>
+        <form onSubmit={handleSubmit}>
 
-    <br></br>
-    <p id="rec"> Privacy Rating: {response2}</p>
-    </Container>
+          <label>
+              <input className = 'upload-company-container' 
+              type="text" placeholder='Company Name' 
+              value= {c_input} onChange={handleCin} ></input>
+          </label>
     
-    </div>
+          <label>
+          <textarea className = "upload-textform-container" 
+          placeholder='Enter a prompt'   type="text" class="text-break"  
+          cols="50" rows="20" value= {input} onChange={handleInputChange}></textarea>
+          </label>
+     
 
-    
+
+          
+          <button className="upload-submit-button" type="submit">Submit</button>
+        </form>
+        
+      </div>
+      </Container>
+      </Col>
+     
+      </Row>
+
+      <Container>
+      <pre id="rec"> {response}</pre>
+
+      <br></br>
+      <pre id="rec"> {response1}</pre>
+
+      <br></br>
+      <p className='upload-privacy-ratings' id="rec"> Privacy Rating: 0 stars {response2}</p>
+      </Container>
+      
+      </div>
+      </Container>
   );
 }
 

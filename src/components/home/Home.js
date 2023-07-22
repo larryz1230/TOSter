@@ -7,15 +7,15 @@ import homeLogo from "../../Assets/transparent-toast.png";
 
 function Home() {
   function handleUpload() {
-    window.location.href = "http://localhost:3000/upload";
+    window.location.href = "/upload";
   }
 
   function handleSearch() {
-    window.location.href = "http://localhost:3000/search";
+    window.location.href = "/search";
   }
 
   function handleResults() {
-    window.location.href = "http://localhost:3000/results";
+    window.location.href = "/results";
   }
 
   return (
