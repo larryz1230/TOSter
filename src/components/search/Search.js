@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer';
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import axios from 'axios';
 import GView from './Projects';
+import ErrorMessage from '../ErrorMessage';
 
 
 function Search() {
@@ -54,6 +55,7 @@ function Search() {
     return (
         <>
             <div className="display-4 font-weight-bold">Search</div>
+            { error && <ErrorMessage variant = "danger">{ error }</ErrorMessage>}
             <Container className="mt-5">
                 <Row className = "justify-content-center">
                     <Col sm={8}>
