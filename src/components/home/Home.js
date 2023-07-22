@@ -61,22 +61,15 @@ function Home() {
             }
           </Row>
         </Container>
+        <button className = 'button-container' onClick = {handleUpload}>Get Started</button>
+      
+    
+      <button className = 'button-container' onClick = {handleSearch}>Search</button>
       </Container>
       
         
      </section>
 
-     <section>
-      <Container> 
-     
-        <button className = 'button-container' onClick = {handleUpload}>Get Started</button>
-        </Container>
-    
-        <button className = 'button-container' onClick = {handleSearch}>Search</button>
-        
-
-      </section>
-    
     </>
   );
   
