@@ -1,6 +1,6 @@
 #customRange3 {
     width: 100%; /* Set the width to fill its container */
-    height: 20px; /* Set the height of the range bar */
+    height: 30px; /* Set the height of the range bar */
     background-color: #f1f1f1; /* Set the background color of the range bar */
     border-radius: 10px; /* Add some roundness to the ends of the range bar */
     outline: none; /* Remove the default focus outline */
@@ -33,3 +33,4 @@
   #customRange3::-moz-range-thumb {
     width: 0;
   }
+
