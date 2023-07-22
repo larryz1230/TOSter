@@ -17,11 +17,40 @@ code {
 }
 
 .home-section {
+  height: 100%;
   position: relative;
   z-index: -1;
-  /*background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;*/
+  background-image: url(./Assets/home-bkgd.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
+}
+.home-content {
+  padding: 9rem 0 2rem !important;
+  text-align: left;
+}
+.heading {
+  font-size: 2.4em !important;
+  padding-left: 50px !important;
+}
+
+.heading-name {
+  font-size: 2.5em !important;
+  padding-left: 45px !important;
+}
+
+.main-name {
+  color: #ff7000;
+}
+
+.Typewriter__wrapper {
+  font-size: 2.2em !important;
+  color: #ff7000 !important;
+  font-weight: 600 !important;
+}
+.Typewriter__cursor {
+  font-size: 2.4em !important;
+  color: #ff7000 !important;
 }
