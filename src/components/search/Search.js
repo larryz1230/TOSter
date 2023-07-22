@@ -3,6 +3,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import axios from 'axios';
+import GView from './Projects';
 import ErrorMessage from '../ErrorMessage';
 
 
@@ -74,6 +75,8 @@ function Search() {
                     </Col>
                 </Row>
             </Container>
+
+            <GView></GView>
         </>
       );
 }
