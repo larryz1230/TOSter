@@ -18,7 +18,8 @@ const Upload = ({ onResponseArrayChange }) => {
 
   const configuration = new Configuration({
 
-    apiKey: process.env.REACT_APP_OPEN_API_KEY,
+
+ apiKey: process.env.REACT_APP_OPEN_API_KEY,
 
   });
   delete configuration.baseOptions.headers['User-Agent'];
