@@ -3,6 +3,7 @@ import './App.css';
 import Home from './components/home/Home'
 import Search from './components/search/Search'
 import Upload from './components/upload/Upload'
+import Results from './components/results/Results'
 
 import {
   BrowserRouter as Router,
@@ -17,12 +18,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-<<<<<<< HEAD
-    <div className="App">
-    Hello world!
-     <Home/>
-    </div>
-=======
     <Router>
       <div className="App" >
         {/* <Navbar /> */}
@@ -30,11 +25,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/results" element={<Results />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
       </div>
     </Router>
->>>>>>> 229c0357995bb1e4ff6af1cc3d2e7b08a4024fd0
   );
 }
 

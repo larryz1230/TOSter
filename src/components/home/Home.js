@@ -3,9 +3,22 @@ import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
 import Type from "./Type";
 
-
 function Home() {
+
+  function handleUpload() {
+    window.location.href = 'http://localhost:3000/upload'
+  }
+
+  function handleSearch() {
+    window.location.href = 'http://localhost:3000/search'
+  }
+
+  function handleResults() {
+    window.location.href = 'http://localhost:3000/results'
+  }
+
   return (
+
      <section>
        <Container fluid className="home-section" id="home">
          <Particle />
@@ -37,11 +50,21 @@ function Home() {
           </Row>
         </Container>
        </Container>
+      <Container> 
+        <button onClick = {handleUpload}>Get Started</button>
+        </Container>
+     
+        <div>
+        <button onClick = {handleSearch}>Search</button>
+        </div>
+
+        <div>
+        <button onClick = {handleResults}>Results</button>
+        </div>
+        
      </section>
 
-    <div>
-        Hi
-    </div>
+     
   );
 }
 
