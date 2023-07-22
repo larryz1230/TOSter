@@ -17,16 +17,10 @@ code {
 }
 
 .home-section {
-  height: 200%;
   margin: 0;
   position: relative;
   z-index: 1;
-  background-image: linear-gradient(
-      to left,
-      rgb(255, 209, 135),
-      rgb(255, 136, 0, 0.1)
-    ),
-    url(./Assets/home-bkgd.jpg);
+  background-image: url(./Assets/kitchen5-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -40,14 +34,14 @@ code {
 .heading {
   color: #ffe9c9;
   font-size: 4em !important; /* originally 2.4 em */
-  padding-left: 50px !important;
+  /*padding-left: 50px !important;*/
   font-family: "Courier New";
 }
 
 .heading-name {
   color: #ffe9c9;
   font-size: 3em !important; /* originally 2.5 em */
-  padding-left: 45px !important;
+  /*padding-left: 45px !important;*/
   font-family: "Times New Roman";
 }
 
@@ -187,9 +181,9 @@ button {
 .upload-company-container {
   text-align: left;
   position: relative;
-  bottom: 200px;
-  right: 425px;
   background-color: rgb(255, 209, 135);
+  bottom: 390px;
+  left: 260px;
 }
 
 .upload-textform-container {
@@ -200,12 +194,6 @@ button {
 
 .upload-heading {
   font-family: "Comic Sans";
-}
-.upload-privacy-ratings {
-  font-family: "Comic Sans";
-  position: relative;
-  font-size: 48px;
-  bottom: 125px;
 }
 
 /*End up uploads*/
