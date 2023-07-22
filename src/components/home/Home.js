@@ -65,7 +65,6 @@ function Home() {
       
       <button className = 'button-container-primary' onClick = {handleUpload}>Get Started</button>
       
-   
       <button className = 'button-container-secondary' onClick = {handleSearch}>Search</button>
 
       <button className = 'button-container-secondary' onClick = {handleResults}>Results</button>

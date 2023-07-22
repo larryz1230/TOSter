@@ -183,7 +183,7 @@ const Upload = ({ onResponseArrayChange }) => {
           <label>
           <textarea className = "upload-textform-container" 
           placeholder='Enter a prompt'   type="text" class="text-break"  
-          cols="50" rows="20" value= {input} onChange={handleInputChange}></textarea>
+          cols="50" rows="15" value= {input} onChange={handleInputChange}></textarea>
           </label>
      
 
@@ -197,16 +197,6 @@ const Upload = ({ onResponseArrayChange }) => {
       </Col>
      
       </Row>
-
-      <Container>
-      <pre id="rec"> {response}</pre>
-
-      <br></br>
-      <pre id="rec"> {response1}</pre>
-
-      <br></br>
-      <p className='upload-privacy-ratings' id="rec"> Privacy Rating: 0 stars {response2}</p>
-      </Container>
       
       </div>
       </Container>

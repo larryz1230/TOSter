@@ -177,8 +177,8 @@ button {
   padding: 20px;
   border-radius:24px;
   margin: 20px;
-  right: 80px;
-  top: 100px;
+  left: 50px;
+  bottom: 100px;
 }
 
 .upload-submit-button {
@@ -188,16 +188,16 @@ button {
   padding: 20px;
   border-radius:24px;
   margin: 20px;
-  right: 310px;
-  bottom: 125px;
+  left: 220px;
 }
 
 .upload-company-container {
   text-align: left;
   position: relative;
-  bottom: 200px;
-  right: 425px;
   background-color:rgb(255, 209, 135);
+  bottom: 390px;
+  left: 260px;
+
 
 }
 
@@ -209,13 +209,8 @@ button {
 }
 
 .upload-heading {
-  font-family: 'Comic Sans';
+  font-family: "Comic Sans";
 }
-.upload-privacy-ratings {
-  font-family: 'Comic Sans';
-  position: relative;
-  font-size: 48px;
-  bottom: 125px;
-  
-}
+
+
 /*End up uploads*/
