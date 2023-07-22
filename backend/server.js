@@ -4,7 +4,9 @@ const dotenv = require('dotenv');
 const connectDB = require("./config/db");
 
 const app = express();
-dotenv.config();
+
+const path = require('path');
+dotenv.config({ path: path.resolve(__dirname, '.env') });
 connectDB();
 
 app.get('/', (req, res) => {
@@ -22,5 +24,5 @@ app.get('/api/data/:comp', (req, res) => {
 });
 
 
-const PORT = process.env.REACT_APP_API_URL || 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
