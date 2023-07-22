@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef  } from 'react';
 import * as pdfjsLib from "pdfjs-dist";
 import { Container, Row, Col } from "react-bootstrap";
 import './upload.css';
+import TypeTwo from './TypeTwo.js'
 
 
 //TODO: send to db
@@ -146,10 +147,7 @@ const Upload = ({ onResponseArrayChange }) => {
       <Container className = 'upload-content'>
      
       
-      
-          <h1 className='upload-heading'>
-              Choose a file to upload!
-          </h1>
+          <TypeTwo />
         <div className="choose-file-container"> {/*was originally mb-3*/}
         <input
           className="form-control"
