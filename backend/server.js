@@ -7,6 +7,7 @@ const compRoutes = require('./routes/compRoutes');
 const app = express();
 
 const path = require('path');
+const { notFound, errorHandler } = require('./middleware/errorMiddleware');
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 connectDB();
 app.use(express.json());
@@ -27,6 +28,8 @@ app.get('/api/data/:comp', (req, res) => {
 
 app.use('/api/companies', compRoutes);
 
+app.use(notFound);
+app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, console.log(`Server started on PORT ${PORT}`));
