@@ -12,22 +12,29 @@ import {
 } from "react-router-dom";
 import "./index.css";
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "./bootstrap.min.css";
+
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 
 function App() {
   return (
-    <Router>
-      <div className="App" >
-        {/* <Navbar /> */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/upload" element={<Upload />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
-      </div>
-    </Router>
+    <>
+      <Header/>
+      <Router>
+        <div className="App" >
+          {/* <Navbar /> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/upload" element={<Upload />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="*" element={<Navigate to="/"/>} />
+          </Routes>
+        </div>
+      </Router>
+      <Footer/>
+    </>
   );
 }
 
