@@ -20,7 +20,12 @@ code {
   height: 100%;
   position: relative;
   z-index: -1;
-  background-image: url(./Assets/home-bkgd.jpg);
+  background-image: linear-gradient(
+      to left,
+      rgb(255, 209, 135),
+      rgb(255, 136, 0, 0.1)
+    ),
+    url(./Assets/home-bkgd.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -32,25 +37,27 @@ code {
   text-align: left;
 }
 .heading {
+  color: #ffe9c9;
   font-size: 2.4em !important;
   padding-left: 50px !important;
 }
 
 .heading-name {
+  color: #ffe9c9;
   font-size: 2.5em !important;
   padding-left: 45px !important;
 }
 
 .main-name {
-  color: #ff7000;
+  color: #f9c87c;
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #ff7000 !important;
+  color: #f9c87c !important;
   font-weight: 600 !important;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #ff7000 !important;
+  color: #f9c87c !important;
 }
