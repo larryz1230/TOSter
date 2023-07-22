@@ -23,7 +23,7 @@ code {
   background-image: url(./Assets/home-bkgd.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: center;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
