@@ -65,7 +65,7 @@ function Search() {
                         value = { company }
                         onChange = {(e) => setCompany(e.target.value)}
                         />
-                        <Button className="rounded-pill" variant="outline-primary">
+                        <Button className="rounded-pill" variant="outline-primary" type = "submit">
                         Search
                         </Button>
                     </Form>
