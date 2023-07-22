@@ -23,7 +23,7 @@ function App() {
         <div className="App" >
           {/* <Navbar /> */}
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home />} exact/>
             <Route path="/upload" element={<Upload />} />
             <Route path="/search" element={<Search />} />
             <Route path="*" element={<Navigate to="/"/>} />
