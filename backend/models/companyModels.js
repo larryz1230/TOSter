@@ -30,6 +30,10 @@ const companySchema = mongoose.Schema(
         pScore: {
             type: String,
             required: true
+        },
+        optout: {
+            type: String,
+            required: true
         }
     },
     {
