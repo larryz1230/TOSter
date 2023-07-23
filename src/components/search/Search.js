@@ -34,7 +34,7 @@ function Search() {
       setLoading(true);
 
       const { data } = await axios.post(
-        "/api/companies/results",
+        "http://localhost:5000/api/companies/results",
         {
           company,
         },

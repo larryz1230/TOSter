@@ -5,9 +5,8 @@ import { Row } from 'react-bootstrap';
 import './res.css'
 
 
-const privrating = "0";
 
-function Example() {
+function Example({ privrating }) {
   const [show, setShow] = useState(false);
   const [safety, setSafety] = useState('');
 
@@ -19,10 +18,10 @@ function Example() {
     if (privrating == '0' || privrating === '1' || privrating === '2') {
       setSafety('Very Unsafe')
     }
-    else if(privrating == '3' || privrating == '4') {
+    else if(privrating === '3' || privrating === '4') {
       setSafety('Unsafe')
     }
-    else if(privrating == '5' || privrating == '6' || privrating == '7') {
+    else if(privrating === '5' || privrating === '6' || privrating === '7') {
       setSafety('Moderate')
     }
     else {
