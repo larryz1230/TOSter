@@ -6,8 +6,9 @@ import "./icons.css";
 
 function Techstack(props) {
 
-    const handleClick = (input) => {
-        props.search(input);
+
+    const handleClick = async (input) => {
+        props.set(input);
       };
 
   return (

@@ -3,7 +3,6 @@ import * as pdfjsLib from "pdfjs-dist";
 import { Container, Row, Col } from "react-bootstrap";
 import "./upload.css";
 import TypeTwo from "./TypeTwo.js";
-import "./upload.css";
 import axios from "axios";
 import ErrorMessage from "../ErrorMessage";
 import errorUtils from "../errorUtils";
