@@ -3,13 +3,15 @@ import { Col, Row } from "react-bootstrap";
 import { propTypes } from "react-bootstrap/esm/Image";
 import { FaInstagram, FaAirbnb, FaGithub, FaGoogle, FaApple,FaFacebook, FaAmazon, FaReddit, FaDiscord, FaMicrosoft, FaSlack, FaPlaystation, FaLinkedin, FaLyft, FaTiktok } from "react-icons/fa6";
 import "./icons.css";
+import { useNavigate } from 'react-router-dom';
 
 function Techstack(props) {
 
+  const navigate = useNavigate();
 
-    const handleClick = async (input) => {
-        props.set(input);
-      };
+  const handleClick = async (input) => {
+    navigate('/results', { state: { c_name: input } });
+  };
 
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
