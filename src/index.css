@@ -48,6 +48,7 @@ code {
   opacity: 0.75;
 }
 
+
 .home-content {
   padding: 9rem 0 2rem !important;
   text-align: left;
@@ -83,7 +84,42 @@ code {
   font-size: 2.4em !important;
   color: #ff9910 !important;
 }
+/*
+.button-container-primary {
+  background-image: url(./Assets/baguette.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 200px;
+  margin: 50px auto;
+  position: relative;
+  padding: 20px;
+  right: 200px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0); 
+  --font-size: 48px;
+}
+*/
 
+.button-container-primary {
+  background-image: url(./Assets/baugette.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 200px;
+  margin: 50px auto;
+  position: relative;
+  padding: 20px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0); 
+  font-size: 32px;
+  padding-top:60px;
+  bottom: 100px;
+  font-family: 'Poppins'
+}
+
+
+/*
 .button-container-primary {
   display: block;
   width: 400px;
@@ -119,40 +155,7 @@ code {
   right: calc(var(--border-size) * -5);
   bottom: calc(var(--border-size) * -5);
 }
-
-.button-container-secondary {
-  display: block;
-  width: 200px;
-  margin: 70px auto;
-  position: relative;
-  padding: 20px;
-  left: 300px;
-  bottom: 270px;
-  border-radius: 24px;
-  --background-color: white;
-  --border-size: 2px;
-}
-
-.button-container-secondary::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  border-radius: 24px;
-  border: var(--border-size) solid var(--background-color);
-  transition: top, left, right, bottom, 100ms ease-in-out;
-}
-
-.button-container-secondary:hover::before,
-.button-container-secondary:focus::before {
-  top: calc(var(--border-size) * -3);
-  left: calc(var(--border-size) * -3);
-  right: calc(var(--border-size) * -3);
-  bottom: calc(var(--border-size) * -3);
-}
+*/
 
 .button-container-upload {
   z-index: 1;
@@ -186,6 +189,7 @@ code {
   right: calc(var(--border-size) * -3);
   bottom: calc(var(--border-size) * -3);
 }
+
 button {
   display: block;
   cursor: pointer;
@@ -199,6 +203,7 @@ button {
   background: #cccccc;
   transition-duration: 0.4s;
 }
+
 
 #preloader {
   position: fixed;

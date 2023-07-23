@@ -20,6 +20,7 @@ function Home() {
 
   return (
     <>
+    <section>
       <Container
         fluid
         className="home-section h-100"
@@ -57,27 +58,19 @@ function Home() {
                 />
               </Col>
             }
+          
           </Row>
+          
+          
         </Container>
-
         <button
-          className="button-container-primary"
-          onClick={handleUpload}>
-          Get Started
-        </button>
-
-        <button
-          className="button-container-secondary"
-          onClick={handleSearch}>
-          Search
-        </button>
-
-        <button
-          className="button-container-secondary"
-          onClick={handleResults}>
-          Results
+        className="button-container-primary"
+        onClick={handleUpload}>
+        Get Started
         </button>
       </Container>
+      
+    </section>
     </>
   );
 }
