@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,6 +12,11 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.opacity-background {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 24px;
 }
 
 .home-header {
@@ -32,17 +39,17 @@ code {
   text-align: left;
 }
 .heading {
-  color: #ffe9c9;
+  color: black;
   font-size: 4em !important; /* originally 2.4 em */
   /*padding-left: 50px !important;*/
-  font-family: "Courier New";
+  font-family: "Poppins";
 }
 
 .heading-name {
-  color: #ffe9c9;
+  color: black;
   font-size: 3em !important; /* originally 2.5 em */
   /*padding-left: 45px !important;*/
-  font-family: "Times New Roman";
+  font-family: "Poppins";
   position: relative;
   right: 5px;
 }
@@ -55,6 +62,7 @@ code {
   font-size: 2.2em !important;
   color: #f9c87c !important; /*#f9c87c */
   font-weight: 600 !important;
+  font-family: "Poppins";
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
@@ -72,11 +80,11 @@ code {
   border-radius: 24px;
   font-size: 32px;
   --background-color: white;
-  --border-size:2px;
+  --border-size: 2px;
 }
 
-.button-container-primary::before{
-  content: ' ';
+.button-container-primary::before {
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -106,11 +114,11 @@ code {
   bottom: 270px;
   border-radius: 24px;
   --background-color: white;
-  --border-size:2px;
+  --border-size: 2px;
 }
 
-.button-container-secondary::before{
-  content: ' ';
+.button-container-secondary::before {
+  content: " ";
   position: absolute;
   top: 0;
   left: 0;
@@ -139,11 +147,9 @@ button {
   border: none;
   padding: 20px;
   font-size: 20px;
-  color: white;
-  background: linear-gradient(90deg, #9383c5, #56e3fa);
+  color: black;
+  background: linear-gradient(90deg, #eec07b, #d8c4aa);
 }
-
-
 
 #preloader {
   position: fixed;
@@ -156,7 +162,6 @@ button {
   background-image: url(./Assets/toaster.gif);
   background-repeat: no-repeat;
   background-position: center;
-  
 }
 
 #preloader-none {
