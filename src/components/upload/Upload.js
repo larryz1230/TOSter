@@ -53,7 +53,7 @@ const Upload = ({ onResponseArrayChange }) => {
     stepsArray.shift();
 
     // // Output the array
-    console.log(stepsArray);
+    //console.log(stepsArray);
     setSteps(stepsArray);
 
     optOut();
@@ -69,8 +69,10 @@ const Upload = ({ onResponseArrayChange }) => {
         },
       ],
     });
+    setCompany(c_input);
 
     console.log(res.data.choices[0].message.content);
+    setOpt(res.data.choices[0].message.content);
     rateSafety();
   };
 
@@ -86,7 +88,62 @@ const Upload = ({ onResponseArrayChange }) => {
     });
 
     console.log(res.data.choices[0].message.content);
+    setPrivacyNumber(res.data.choices[0].message.content);
   };
+
+  useEffect(() => {
+    const uploadData = async () => {
+      if (steps.length > 0 && company && privacyNumber && opt) {
+        const bullet1 = steps[0];
+        const bullet2 = steps[1];
+        const bullet3 = steps[2];
+        const bullet4 = steps[3];
+        const bullet5 = steps[4];
+
+        console.log(bullet1);
+        console.log(bullet2);
+        console.log(bullet3);
+        console.log(bullet4);
+        console.log(bullet5);
+
+        try {
+          const config = {
+            headers: {
+              "Content-type": "application/json",
+            },
+          };
+
+          console.log("DATA PRE UPLOAD");
+          console.log(company);
+          console.log(steps);
+          console.log(privacyNumber);
+          console.log(opt);
+          const { data } = await axios.post(
+            "http://localhost:5000/api/companies",
+            {
+              company,
+              b1: bullet1,
+              b2: bullet2,
+              b3: bullet3,
+              b4: bullet4,
+              b5: bullet5,
+              pScore: privacyNumber,
+              optout: opt,
+            },
+            config
+          );
+
+          localStorage.setItem("companyName", JSON.stringify(data));
+
+          console.log("Done with upload.");
+        } catch (error) {
+          setError(error.response.data.message);
+        }
+      }
+    };
+
+    uploadData();
+  }, [steps, company, privacyNumber, opt]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
