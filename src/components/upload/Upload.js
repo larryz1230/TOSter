@@ -253,6 +253,12 @@ const Upload = ({ onResponseArrayChange }) => {
                   onClick={handleUpload}>
                   Upload
                 </button>
+                <button
+                  type="button"
+                  className="upload-upload-button button-container-upload"
+                  onClick={() => window.location.href='http://localhost:3000/search'}>
+                  Return
+                </button>
               </div>
             </Container>
           </Col>

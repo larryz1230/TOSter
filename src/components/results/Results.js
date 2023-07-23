@@ -133,6 +133,11 @@ function Results() {
                         { opt }
                         </div>
                     </div>
+
+                    <button className="res-button" type="button" onClick={() => window.location.href='http://localhost:3000/search'} style = {{position: 'relative', top: 20}}>
+                        Return to Search
+                    </button>
+                    
                     </div>
                     </Container>       
                 </Container>

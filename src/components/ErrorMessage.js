@@ -21,9 +21,9 @@ function ErrorMessage( {message, loc, locMessage} ) {
       {[
         'danger'
       ].map((variant) => (
-        <Alert key={variant} variant={variant}>
+        <Alert key={variant} variant={variant} className = "text-center">
           { message }
-          <Alert.Link href = {loc}>{ locMessage }</Alert.Link>.
+          <Alert.Link href = {loc}>{ locMessage }</Alert.Link>
         </Alert>
       ))}
     </>
