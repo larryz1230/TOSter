@@ -5,9 +5,7 @@ function TypeTwo() {
   return (
     <Typewriter
       options={{
-        strings: [
-          "Choose a file to upload!"
-        ],
+        strings: ["Choose a file to upload!", "Or paste in the file!"],
         autoStart: true,
         loop: true,
         // deleteSpeed: 150,

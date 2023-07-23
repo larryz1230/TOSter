@@ -141,32 +141,33 @@ const Upload = ({ onResponseArrayChange }) => {
       <div>
         <Row>
           <Col>
-            <Container className="upload-content">
-              <TypeTwo />
-              <div className="choose-file-container">
-                {" "}
-                {/*was originally mb-3*/}
-                <input
-                  className="form-control"
-                  type="file"
-                  id="formFile"
-                  style={{ maxWidth: "250px" }}
-                  ref={fileInputRef}
-                />
-              </div>
-              <button
-                type="button"
-                className="upload-upload-button"
-                onClick={handleUpload}>
-                Upload
-              </button>
-            </Container>
+            <div className="white-bg">
+              <Container className="upload-content">
+                <TypeTwo />
+                <div className="choose-file-container">
+                  {" "}
+                  {/*was originally mb-3*/}
+                  <input
+                    className="form-control"
+                    type="file"
+                    id="formFile"
+                    style={{ maxWidth: "250px", borderRadius: "10px" }}
+                    ref={fileInputRef}
+                  />
+                </div>
+                <button
+                  type="button"
+                  className="upload-upload-button"
+                  onClick={handleUpload}>
+                  Upload
+                </button>
+              </Container>
+            </div>
           </Col>
 
-          <br></br>
           <Col>
-            <Container className="upload-form-container">
-              <div>
+            <div className="white-bg">
+              <Container className="upload-form-container">
                 <form onSubmit={handleSubmit}>
                   <label>
                     <input
@@ -186,7 +187,14 @@ const Upload = ({ onResponseArrayChange }) => {
                       cols="50"
                       rows="15"
                       value={input}
-                      onChange={handleInputChange}></textarea>
+                      onChange={handleInputChange}
+                      style={{
+                        borderRadius: "10px",
+                        resize: "none",
+                        padding: "12px",
+                        position: "relative",
+                        right: "35px",
+                      }}></textarea>
                   </label>
 
                   <button
@@ -195,8 +203,8 @@ const Upload = ({ onResponseArrayChange }) => {
                     Submit
                   </button>
                 </form>
-              </div>
-            </Container>
+              </Container>
+            </div>
           </Col>
         </Row>
       </div>
