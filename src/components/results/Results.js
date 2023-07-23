@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { useEffect, useState } from "react";
 import { Container } from 'react-bootstrap';
 import Modal from './Modal';
@@ -139,6 +139,7 @@ function Results() {
             </Container>
         );
     }
+
 }
 
 export default Results;
