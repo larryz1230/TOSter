@@ -3,7 +3,6 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import axios from 'axios';
 import Gallery from './Gallery';
 import ErrorMessage from '../ErrorMessage';
-import errorUtils from '../errorUtils';
 
 
 function Search() {
@@ -12,8 +11,8 @@ function Search() {
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const submitHandler = async () => {
-        // e.preventDefault();
+    const submitHandler = async (e) => {
+        e.preventDefault();
         
         // console.log(company);
 
@@ -39,8 +38,8 @@ function Search() {
         } catch (error) {
             setError(error.response.data.message);
         }
+        
     }
-
 
     const fetchCompany = async () => {
         const { data } = await axios.get('/api/data');
@@ -55,6 +54,8 @@ function Search() {
     return (
         <>
             <h2 className="mb-3">Search by Company Name</h2>
+
+
             { error && <ErrorMessage variant = "danger">{ error }</ErrorMessage>}
             <Container className="mt-5">
                 <Row className = "justify-content-center">

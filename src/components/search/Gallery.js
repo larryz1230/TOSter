@@ -6,14 +6,9 @@ import "./icons.css";
 
 function Techstack(props) {
 
-    const timeout = async(delay) => {
-        return new Promise( res => setTimeout(res, delay) );
-    }
 
-    const handleClick = (input) => {
+    const handleClick = async (input) => {
         props.set(input);
-        await timeout(1000); //for 1 sec delay
-        props.submit();
       };
 
   return (
