@@ -183,7 +183,7 @@ button {
   padding: 20px;
   font-size: 20px;
   color: black;
-  background: linear-gradient(90deg, #eec07b, #d8c4aa);
+  background: #cccccc;
   transition-duration: 0.4s;
 }
 
@@ -207,7 +207,7 @@ button {
 /* For Upload */
 
 .upload-background {
-  height: 200%;
+  height: 100vh;
   margin: 0;
   position: relative;
   z-index: 1;
@@ -289,3 +289,26 @@ button {
   height: 70vh;
 }
 /*End up uploads*/
+
+/*search*/
+
+.search-bg {
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  background-color: #cccccc;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-bottom: 30px !important;
+  padding-top: 30px !important;
+}
+.search-white-bg {
+  background-color: white;
+  border-radius: 5%;
+  margin: 0 50px;
+  height: 75vh;
+  padding-top: 1%;
+  width: 75vw;
+}
