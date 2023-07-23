@@ -112,7 +112,14 @@ const Upload = ({ onResponseArrayChange }) => {
                 console.log(opt);
                 const { data } = await axios.post(
                     "http://localhost:5000/api/companies",
-                    { company, bullet1, bullet2, bullet3, bullet4, bullet5, privacyNumber, opt },
+                    { company, 
+                      b1: bullet1, 
+                      b2: bullet2, 
+                      b3: bullet3, 
+                      b4: bullet4, 
+                      b5: bullet5, 
+                      pScore: privacyNumber, 
+                      optout: opt },
                     config
                 );
 
