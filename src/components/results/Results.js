@@ -60,7 +60,7 @@ function Results() {
 
                     <div class="card" >
                     <div class="card-header">
-                        TOS Summary
+                        <b>TOS Summary</b>
                     </div>
                     <ul class="list-group list-group-flush" id="myList">
 
@@ -70,12 +70,13 @@ function Results() {
 
                 <Container>
                 <div>
-                <button className="btn btn-primary" type="button" onClick={toggleCollapse}>
+                <button className="res-button" type="button" onClick={toggleCollapse} style = {{position: 'relative', 
+                top: 20}}>
                     How Can I Opt Out?
                 </button>
 
                 <div className={`collapse ${isCollapsed ? '' : 'show'}`} id="collapseExample">
-                    <div className="card card-body">
+                    <div className="card card-body" style = {{position: 'relative', top: 30}}>
                     Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
                     </div>
                 </div>
