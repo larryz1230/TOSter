@@ -50,39 +50,41 @@ function Results() {
         
 
         <Container fluid className='upload-background'>
-            <Container>
-                <h1>Results For: Company Name</h1>
+            <Container className='res-opacity-background'>
+                <Container>
+                    <h1 className = 'heading'>Results For: Company Name</h1>
 
-                <Modal></Modal>
+                    <Modal></Modal>
+
+                    
+
+                    <div class="card" >
+                    <div class="card-header">
+                        TOS Summary
+                    </div>
+                    <ul class="list-group list-group-flush" id="myList">
+
+                    </ul>
+                    </div>
+                </Container>
+
+                <Container>
+                <div>
+                <button className="btn btn-primary" type="button" onClick={toggleCollapse}>
+                    How Can I Opt Out?
+                </button>
+
+                <div className={`collapse ${isCollapsed ? '' : 'show'}`} id="collapseExample">
+                    <div className="card card-body">
+                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                    </div>
+                </div>
+                </div>
+                </Container>
+
 
                 
-
-                <div class="card" >
-                <div class="card-header">
-                    TOS Summary
-                </div>
-                <ul class="list-group list-group-flush" id="myList">
-
-                </ul>
-                </div>
             </Container>
-
-            <Container>
-            <div>
-            <button className="btn btn-primary" type="button" onClick={toggleCollapse}>
-                How Can I Opt Out?
-            </button>
-
-            <div className={`collapse ${isCollapsed ? '' : 'show'}`} id="collapseExample">
-                <div className="card card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                </div>
-            </div>
-            </div>
-            </Container>
-
-
-            
         </Container>
 
     );

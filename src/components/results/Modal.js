@@ -1,23 +1,48 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import './res.css'
 
 
-const privrating = "7";
+const privrating = "5";
 
 function Example() {
   const [show, setShow] = useState(false);
+  const [safety, setSafety] = useState('');
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+
+  function handleSafety({privrating}){
+    if (privrating == '0' || privrating === '1' || privrating === '2') {
+      setSafety('Very Unsafe')
+    }
+    else if(privrating == '3' || privrating == '4') {
+      setSafety('Unsafe')
+    }
+    else if(privrating == '5' || privrating == '6' || privrating == '7') {
+      setSafety('Moderate')
+    }
+    else {
+      setSafety('Safe')
+    }
+  }
+
+  useEffect(() => {
+    handleSafety({privrating})
+  }, [privrating])
+
+
   return (
     <>
       
-      <label for="customRange3" class="form-label"><a variant="primary" style={{ color: 'blue' }} onClick={handleShow}>Privacy Rating:</a> {privrating}/10</label>
+      <label for="customRange3" class="form-label"><u variant="primary" style={{ color: 'blue'}} onClick={handleShow}>Privacy Rating:</u> {privrating}/10</label>
       <br></br>
-      <label for="customRange3" class="form-label">Safety Level: Moderate</label>
+      <label for="customRange3" class="form-label">Safety Level: </label> 
+      {' '} {/* creates a space between Safety Level and safety */}
+      <label style={{ color: safety === 'Very Unsafe' ? 'red' : safety === 'Unsafe' ? 'orange' 
+      : safety === 'Moderate' ? '#FDDA0D' : 'green'}}> {safety}</label> 
       <input disabled="true" type="range" class="form-range" min="0" max="10" step="1" id="customRange3" value={privrating}></input>
 
       <Modal show={show} onHide={handleClose}>
