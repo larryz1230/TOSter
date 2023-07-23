@@ -52,7 +52,9 @@ function Search() {
 
     return (
         <>
-            <div className="display-4 font-weight-bold">Search</div>
+            <h2 className="mb-3">Search by Company Name</h2>
+
+
             { error && <ErrorMessage variant = "danger">{ error }</ErrorMessage>}
             <Container className="mt-5">
                 <Row className = "justify-content-center">
@@ -73,8 +75,11 @@ function Search() {
                     </Col>
                 </Row>
 
-
-                <Gallery></Gallery>
+                <Row>
+                <h2>Or select from popular searches:</h2>
+                <Gallery search={setCompany}></Gallery>
+                </Row>
+                
             </Container>
 
             
