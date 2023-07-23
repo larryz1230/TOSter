@@ -5,6 +5,7 @@ import { Button, Col, Container, Form, Row } from "react-bootstrap";
 import axios from 'axios';
 import GView from './Projects';
 import ErrorMessage from '../ErrorMessage';
+import errorUtils from '../errorUtils';
 
 
 function Search() {
@@ -55,7 +56,7 @@ function Search() {
     return (
         <>
             <div className="display-4 font-weight-bold">Search</div>
-            { error && <ErrorMessage variant = "danger">{ error }</ErrorMessage>}
+            { error && <ErrorMessage variant = "danger" message = "Company not found!">{ error }</ErrorMessage>}
             <Container className="mt-5">
                 <Row className = "justify-content-center">
                     <Col sm={8}>
