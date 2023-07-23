@@ -141,8 +141,8 @@ const Upload = ({ onResponseArrayChange }) => {
       <div>
         <Row>
           <Col>
-            <div className="white-bg">
-              <Container className="upload-content">
+            <Container className="upload-content">
+              <div className="white-bg d-flex flex-column justify-content-center align-items-center">
                 <TypeTwo />
                 <div className="choose-file-container">
                   {" "}
@@ -161,14 +161,14 @@ const Upload = ({ onResponseArrayChange }) => {
                   onClick={handleUpload}>
                   Upload
                 </button>
-              </Container>
-            </div>
+              </div>
+            </Container>
           </Col>
 
           <Col>
-            <div className="white-bg">
-              <Container className="upload-form-container">
-                <form onSubmit={handleSubmit}>
+            <Container className="upload-form-container">
+              <form onSubmit={handleSubmit}>
+                <div className="white-bg d-flex flex-column justify-content-center align-items-center">
                   <label>
                     <input
                       className="upload-company-container"
@@ -193,7 +193,6 @@ const Upload = ({ onResponseArrayChange }) => {
                         resize: "none",
                         padding: "12px",
                         position: "relative",
-                        right: "35px",
                       }}></textarea>
                   </label>
 
@@ -202,9 +201,9 @@ const Upload = ({ onResponseArrayChange }) => {
                     type="submit">
                     Submit
                   </button>
-                </form>
-              </Container>
-            </div>
+                </div>
+              </form>
+            </Container>
           </Col>
         </Row>
       </div>
