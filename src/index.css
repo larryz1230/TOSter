@@ -149,6 +149,7 @@ button {
   font-size: 20px;
   color: black;
   background: linear-gradient(90deg, #eec07b, #d8c4aa);
+  transition-duration: 0.4s;
 }
 
 #preloader {
@@ -175,12 +176,7 @@ button {
   margin: 0;
   position: relative;
   z-index: 1;
-  background-image: linear-gradient(
-      to left,
-      rgb(255, 209, 135),
-      rgb(255, 136, 0, 0.1)
-    ),
-    url(./Assets/home-bkgd.jpg);
+  background-color: #cccccc;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -191,10 +187,8 @@ button {
 /*Column on the left side*/
 .upload-content {
   padding: 9rem 0 2rem !important;
-  text-align: left;
+  text-align: center;
   position: relative;
-  left: 200px;
-  margin: 50px;
 }
 
 /*Column on right side*/
@@ -202,7 +196,6 @@ button {
   padding: 9rem 0 2rem !important;
   text-align: left;
   position: relative;
-  margin: 50px;
 }
 
 .choose-file-container {
@@ -210,7 +203,7 @@ button {
   text-align: left;
   position: relative;
   bottom: 100px;
-  left: 50px;
+  border-radius: 10px;
 }
 
 .upload-upload-button {
@@ -220,7 +213,6 @@ button {
   padding: 20px;
   border-radius: 24px;
   margin: 20px;
-  left: 50px;
   bottom: 100px;
 }
 
@@ -231,25 +223,32 @@ button {
   padding: 20px;
   border-radius: 24px;
   margin: 20px;
-  left: 220px;
 }
 
 .upload-company-container {
   text-align: left;
   position: relative;
-  background-color: rgb(255, 209, 135);
-  bottom: 390px;
-  left: 260px;
+  border-radius: 10px;
+  height: 40px;
+  padding: 12px;
+  font-size: large;
+  margin-bottom: 20px;
 }
 
 .upload-textform-container {
   text-align: left;
   position: relative;
-  bottom: 40px;
+  bottom: 30px;
 }
 
 .upload-heading {
   font-family: "Comic Sans";
 }
 
+.white-bg {
+  background-color: white;
+  border-radius: 5%;
+  margin: 0 50px;
+  height: 700px;
+}
 /*End up uploads*/
