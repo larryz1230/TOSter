@@ -4,24 +4,27 @@ import Modal from "react-bootstrap/Modal";
 import { Row } from "react-bootstrap";
 import "./res.css";
 
-const privrating = "7";
 
-function Example() {
+function Example({ privrating }) {
   const [show, setShow] = useState(false);
   const [safety, setSafety] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  function handleSafety({ privrating }) {
-    if (privrating == "0" || privrating === "1" || privrating === "2") {
-      setSafety("Very Unsafe");
-    } else if (privrating == "3" || privrating == "4") {
-      setSafety("Unsafe");
-    } else if (privrating == "5" || privrating == "6" || privrating == "7") {
-      setSafety("Moderate");
-    } else {
-      setSafety("Safe");
+
+  function handleSafety({privrating}){
+    if (privrating == '0' || privrating === '1' || privrating === '2') {
+      setSafety('Very Unsafe')
+    }
+    else if(privrating === '3' || privrating === '4') {
+      setSafety('Unsafe')
+    }
+    else if(privrating === '5' || privrating === '6' || privrating === '7') {
+      setSafety('Moderate')
+    }
+    else {
+      setSafety('Safe')
     }
   }
 

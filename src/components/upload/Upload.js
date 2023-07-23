@@ -67,6 +67,16 @@ const Upload = ({ onResponseArrayChange }) => {
     optOut();
   };
 
+  // const fetchCompany = async () => {
+  //   const { data } = await axios.get("/api/data");
+
+  //   console.log(data);
+  // };
+
+  // useEffect(() => {
+  //   fetchCompany();
+  // }, []);
+
   const optOut = async () => {
     const res = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
