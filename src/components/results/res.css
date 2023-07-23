@@ -53,11 +53,17 @@
   }
 
 .res-privacy-rating {
-    font-size:32px;
+    font-size: 32px;
+    position: relative;
+    top: 30px;
+    right: 200px;
 }
 
 .res-safety-score {
     font-size: 32px;
+    position: relative;
+    left: 200px;
+    bottom: 41px;
 }
   
   
