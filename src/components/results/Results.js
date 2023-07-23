@@ -3,11 +3,19 @@ import { useEffect, useState } from "react";
 import { Container } from 'react-bootstrap';
 import Modal from './Modal';
 import './res.css'
+import { useLocation } from 'react-router-dom';
 
   
 var set = false;
 
 function Results() {
+
+    const location = useLocation();
+
+  // Access the prop passed through the state object
+    const c_name = location.state?.c_name || 'Default Value';
+
+    console.log(c_name);
 
     const [isCollapsed, setCollapsed] = useState(true);
 
@@ -22,6 +30,8 @@ function Results() {
 
         console.log("called useeffect");
         if (!set){
+
+            //insert here????
             const myArray = [
             "qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq",
             "qwdkqw qwdjkwqjd qwjkdjwq q djwd qwd kqwdhjqwkh djkqhkdqdjwhq",
