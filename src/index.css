@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap%27");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -43,8 +44,9 @@ code {
   color: black;
   font-size: 4em !important; /* originally 2.4 em */
   /*padding-left: 50px !important;*/
-  font-family: "Roboto";
-  padding-left: 40px;
+  padding-left: 46px;
+  font-family: "Poppins";
+  
 }
 
 .heading-name {
@@ -60,19 +62,19 @@ code {
   font-size: 64px;
   position: relative;
   top: 4px;
-  right: 20px;
+  
 
 }
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #f9c87c !important; /*#f9c87c */
+  color: #674023 !important; /*#f9c87c */
   font-weight: 600 !important;
-  padding-left: 45px;
+  padding-left: 55px;
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #f9c87c !important;
+  color: #674023 !important;
 }
 
 .button-container-primary {
@@ -84,7 +86,8 @@ code {
   padding: 20px;
   right: 200px;
   border-radius: 24px;
-  font-size: 32px;
+  font-family: "Poppins";
+  font-size: 48px;
   --background-color: white;
   --border-size:2px;
 }
