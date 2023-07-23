@@ -33,8 +33,8 @@ function Techstack(props) {
       <Col xs={4} md={2} className="tech-icons" onClick={() => handleClick("Facebook")}>
         <FaFacebook />
       </Col>
-      <Col xs={4} md={2} className="tech-icons" onClick={() => handleClick("Amazon")}>
-        <FaAmazon />
+      <Col xs={4} md={2} className="tech-icons" onClick={() => handleClick("Playstation")}>
+        <FaPlaystation />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <FaReddit />
@@ -51,7 +51,7 @@ function Techstack(props) {
       <Col xs={4} md={2} className="tech-icons">
         <FaSlack />
       </Col>
-      <Col xs={4} md={2} className="tech-icons">
+      <Col xs={4} md={2} className="tech-icons" onClick={() => handleClick("LinkedIn")}>
         <FaLinkedin />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
