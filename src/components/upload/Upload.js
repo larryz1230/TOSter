@@ -6,6 +6,7 @@ import TypeTwo from "./TypeTwo.js";
 import axios from "axios";
 import ErrorMessage from "../ErrorMessage";
 import errorUtils from "../errorUtils";
+import { useNavigate } from "react-router-dom";
 
 //TODO: send to db
 
@@ -28,6 +29,13 @@ const Upload = ({ onResponseArrayChange }) => {
   });
   delete configuration.baseOptions.headers["User-Agent"];
   const openai = new OpenAIApi(configuration);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    // Pass the prop while navigating to the target page
+    navigate("/results", { state: { c_name: c_input } });
+  };
 
   const getSummary = async () => {
     const res = await openai.createChatCompletion({
@@ -136,6 +144,8 @@ const Upload = ({ onResponseArrayChange }) => {
           localStorage.setItem("companyName", JSON.stringify(data));
 
           console.log("Done with upload.");
+
+          handleClick();
         } catch (error) {
           setError(error.response.data.message);
         }

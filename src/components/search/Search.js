@@ -4,10 +4,20 @@ import axios from "axios";
 import Gallery from "./Gallery";
 import ErrorMessage from "../ErrorMessage";
 
+import { useNavigate } from 'react-router-dom';
+
 function Search() {
   const [company, setCompany] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    // Pass the prop while navigating to the target page
+    navigate('/results', { state: { c_name: company } });
+  };
+
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -33,6 +43,8 @@ function Search() {
 
       console.log(data);
       localStorage.setItem("companyName", JSON.stringify(data));
+
+      handleClick();
 
       setLoading(false);
     } catch (error) {

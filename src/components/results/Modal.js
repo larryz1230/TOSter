@@ -49,7 +49,7 @@ function Example() {
       <input disabled="true" type="range" class="form-range" min="0" max="10" step="1" id="customRange3" value={privrating}></input>
     
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} className='modal-container'>
         <Modal.Header closeButton>
           <Modal.Title>What is privacy rating? </Modal.Title>
         </Modal.Header>
