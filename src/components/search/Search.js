@@ -69,7 +69,7 @@ function Search() {
       <div className="search-white-bg">
         <h2 className="mb-3">Search by Company Name</h2>
 
-        {error && <ErrorMessage variant="danger">{error}</ErrorMessage>}
+        {error && <ErrorMessage variant="danger" message = "Company Not Found! Consider uploading it " locMessage = "here." loc = "http://localhost:3000/upload">{error}</ErrorMessage>}
         <Container className="mt-5">
           <Row className="justify-content-center">
             <Col sm={8}>

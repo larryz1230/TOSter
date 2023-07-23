@@ -86,7 +86,7 @@ function Results() {
 
     if (loading) {
         return (
-            <Container><div>Loading ...</div></Container>
+            <Container><div>Loading...</div></Container>
         )
     }
 

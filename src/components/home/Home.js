@@ -65,7 +65,7 @@ function Home() {
         </Container>
         <button
         className="button-container-primary"
-        onClick={handleUpload}>
+        onClick={handleSearch}>
         Get Started
         </button>
       </Container>
