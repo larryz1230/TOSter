@@ -11,8 +11,8 @@ function Search() {
     const [error, setError] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const submitHandler = async (e) => {
-        e.preventDefault();
+    const submitHandler = async () => {
+        // e.preventDefault();
         
         // console.log(company);
 
@@ -39,6 +39,7 @@ function Search() {
             setError(error.response.data.message);
         }
     }
+
 
     const fetchCompany = async () => {
         const { data } = await axios.get('/api/data');
@@ -77,7 +78,7 @@ function Search() {
 
                 <Row>
                 <h2>Or select from popular searches:</h2>
-                <Gallery search={setCompany}></Gallery>
+                <Gallery set={setCompany} submit = {submitHandler}></Gallery>
                 </Row>
                 
             </Container>
