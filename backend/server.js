@@ -3,8 +3,10 @@ const data = require('./Data/SampleData');
 const dotenv = require('dotenv');
 const connectDB = require("./config/db");
 const compRoutes = require('./routes/compRoutes');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 
 const path = require('path');
 const { notFound, errorHandler } = require('./middleware/errorMiddleware');
@@ -27,6 +29,7 @@ app.get('/api/data/:comp', (req, res) => {
 });
 
 app.use('/api/companies', compRoutes);
+app.use('/api/data/results', compRoutes);
 
 app.use(notFound);
 app.use(errorHandler);
