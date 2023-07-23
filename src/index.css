@@ -189,8 +189,6 @@ button {
   padding: 9rem 0 2rem !important;
   text-align: center;
   position: relative;
-
-  margin-right: 500px;
 }
 
 /*Column on right side*/
@@ -198,7 +196,6 @@ button {
   padding: 9rem 0 2rem !important;
   text-align: left;
   position: relative;
-  margin-left: 500px;
 }
 
 .choose-file-container {
@@ -252,6 +249,6 @@ button {
   background-color: white;
   border-radius: 5%;
   margin: 0 50px;
-  height: 800px;
+  height: 700px;
 }
 /*End up uploads*/
