@@ -38,6 +38,7 @@ function Search() {
         } catch (error) {
             setError(error.response.data.message);
         }
+        
     }
 
     const fetchCompany = async () => {
@@ -77,7 +78,7 @@ function Search() {
 
                 <Row>
                 <h2>Or select from popular searches:</h2>
-                <Gallery search={setCompany}></Gallery>
+                <Gallery set={setCompany} submit = {submitHandler}></Gallery>
                 </Row>
                 
             </Container>
