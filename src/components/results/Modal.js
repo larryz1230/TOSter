@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import { Row } from 'react-bootstrap';
 import './res.css'
 
 
-const privrating = "5";
+const privrating = "0";
 
 function Example() {
   const [show, setShow] = useState(false);
@@ -36,15 +37,17 @@ function Example() {
 
   return (
     <>
-      
-      <label className='res-privacy-rating' for="customRange3" class="form-label"><u variant="primary" style={{ color: 'blue'}} onClick={handleShow}>Privacy Rating:</u> {privrating}/10</label>
+    
+      <label className= 'res-privacy-rating' for="customRange3"><u variant="primary" style={{ color: 'blue'}} onClick={handleShow}>Privacy Rating:</u> {privrating}/10</label> {/*class="form-label"*/}
       <br></br>
       <br></br>
-      <label className = 'res-safety-score' for="customRange3" class="form-label">Safety Level: </label> 
+      <label className = 'res-safety-score' for="customRange3">Safety Level: </label> 
       {' '} {/* creates a space between Safety Level and safety */}
       <label className = 'res-safety-score' style={{ color: safety === 'Very Unsafe' ? 'red' : safety === 'Unsafe' ? 'orange' 
       : safety === 'Moderate' ? '#FDDA0D' : 'green'}}> {safety}</label> 
+     
       <input disabled="true" type="range" class="form-range" min="0" max="10" step="1" id="customRange3" value={privrating}></input>
+    
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>

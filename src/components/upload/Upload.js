@@ -53,7 +53,7 @@ const Upload = ({ onResponseArrayChange }) => {
     stepsArray.shift();
 
     // // Output the array
-    console.log(stepsArray);
+    //console.log(stepsArray);
     setSteps(stepsArray);
 
     optOut();
@@ -61,38 +61,85 @@ const Upload = ({ onResponseArrayChange }) => {
 
   const optOut = async () => {
     const res = await openai.createChatCompletion({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "user",
-          content: `how can delete: ${c_input} account in less than 5 steps`,
-        },
-      ],
-    });
 
-    console.log(res.data.choices[0].message.content);
-    rateSafety();
-  };
+        model: "gpt-3.5-turbo",
+        messages: [{role: "user", content: `how can delete: ${c_input} account in less than 5 steps`}]
+      });
+      setCompany(c_input);
+  
+      console.log(res.data.choices[0].message.content);
+      setOpt(res.data.choices[0].message.content);
+      rateSafety();
+  }
 
   const rateSafety = async () => {
     const res = await openai.createChatCompletion({
-      model: "gpt-3.5-turbo",
-      messages: [
-        {
-          role: "user",
-          content: `Based on historical information and general perception, rate ${c_input}'s privacy safety on a scale from 1 to 10, giving only a numerical response`,
-        },
-      ],
-    });
+        model: "gpt-3.5-turbo",
+        messages: [{role: "user", content: `Based on historical information and general perception, rate ${c_input}'s privacy safety on a scale from 1 to 10, giving only a numerical response`}]
+      });
+  
+      console.log(res.data.choices[0].message.content);
+      setPrivacyNumber(res.data.choices[0].message.content);
+  }
 
-    console.log(res.data.choices[0].message.content);
-  };
+  useEffect(() => {
+    const uploadData = async () => {
+        if(steps.length > 0 && company && privacyNumber && opt) {
+            const bullet1 = steps[0];
+            const bullet2 = steps[1];
+            const bullet3 = steps[2];
+            const bullet4 = steps[3];
+            const bullet5 = steps[4];
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await getSummary();
-  };
+            console.log(bullet1);
+            console.log(bullet2);
+            console.log(bullet3);
+            console.log(bullet4);
+            console.log(bullet5);
 
+            try {
+                const config = {
+                    headers: {
+                        "Content-type": "application/json"
+                    }
+                };
+
+                console.log("DATA PRE UPLOAD");
+                console.log(company);
+                console.log(steps);
+                console.log(privacyNumber);
+                console.log(opt);
+                const { data } = await axios.post(
+                    "http://localhost:5000/api/companies",
+                    { company, 
+                      b1: bullet1, 
+                      b2: bullet2, 
+                      b3: bullet3, 
+                      b4: bullet4, 
+                      b5: bullet5, 
+                      pScore: privacyNumber, 
+                      optout: opt },
+                    config
+                );
+
+                localStorage.setItem("companyName", JSON.stringify(data));
+
+                console.log("Done with upload.");
+            } catch (error) {
+                setError(error.response.data.message);
+            }
+        }
+    };
+
+    uploadData();
+}, [steps, company, privacyNumber, opt]);
+
+
+const handleSubmit  = async (e) => {
+  e.preventDefault();
+  await getSummary();
+}
+  
   const handleInputChange = (event) => {
     setInput(event.target.value);
   };
