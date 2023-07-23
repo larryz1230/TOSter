@@ -72,6 +72,54 @@ code {
 }
 
 .button-container-primary {
+  background-image: url(./Assets/baguette.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+  width: 400px;
+  height: 200px;
+  margin: 50px auto;
+  position: relative;
+  padding: 20px;
+  right: 200px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0);
+  --border-size: 2px;
+  --font-size: 48px;
+}
+
+.button-container-primary::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 24px;
+  border: var(--border-size);
+  transition: top, left, right, bottom, 100ms ease-in-out;
+}
+
+.button-container-primary:hover::before,
+.button-container-primary:focus::before {
+  top: calc(var(--font-size) * -10);
+  left: calc(var(--font-size) * -10);
+  right: calc(var(--font-size) * -10);
+  bottom: calc(var(--font-size) * -10);
+}
+
+
+
+
+
+
+
+
+
+
+/*
+.button-container-primary {
   display: block;
   width: 400px;
   height: 200px;
@@ -106,6 +154,8 @@ code {
   right: calc(var(--border-size) * -5);
   bottom: calc(var(--border-size) * -5);
 }
+*/
+
 
 .button-container-secondary {
   display: block;
