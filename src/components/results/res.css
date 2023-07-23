@@ -42,5 +42,27 @@
 
   }
 
+.res-button {
+    display: block;
+    width: 200px;
+    margin: 70px auto;
+    position: relative;
+    border-radius: 24px;
+    --background-color: black;
+    --border-size: 2px;
+  }
+
+.res-privacy-rating {
+    font-size:32px;
+}
+
+.res-safety-score {
+    font-size: 32px;
+}
+  
+  
+
+
+  
   
 

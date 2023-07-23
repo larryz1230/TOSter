@@ -37,11 +37,12 @@ function Example() {
   return (
     <>
       
-      <label for="customRange3" class="form-label"><u variant="primary" style={{ color: 'blue'}} onClick={handleShow}>Privacy Rating:</u> {privrating}/10</label>
+      <label className='res-privacy-rating' for="customRange3" class="form-label"><u variant="primary" style={{ color: 'blue'}} onClick={handleShow}>Privacy Rating:</u> {privrating}/10</label>
       <br></br>
-      <label for="customRange3" class="form-label">Safety Level: </label> 
+      <br></br>
+      <label className = 'res-safety-score' for="customRange3" class="form-label">Safety Level: </label> 
       {' '} {/* creates a space between Safety Level and safety */}
-      <label style={{ color: safety === 'Very Unsafe' ? 'red' : safety === 'Unsafe' ? 'orange' 
+      <label className = 'res-safety-score' style={{ color: safety === 'Very Unsafe' ? 'red' : safety === 'Unsafe' ? 'orange' 
       : safety === 'Moderate' ? '#FDDA0D' : 'green'}}> {safety}</label> 
       <input disabled="true" type="range" class="form-range" min="0" max="10" step="1" id="customRange3" value={privrating}></input>
 
