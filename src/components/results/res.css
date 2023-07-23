@@ -1,78 +1,80 @@
-#customRange3 {
-    width: 100%; /* Set the width to fill its container */
-    height: 30px; /* Set the height of the range bar */
-    background-color: #f1f1f1; /* Set the background color of the range bar */
-    border-radius: 10px; /* Add some roundness to the ends of the range bar */
-    outline: none; /* Remove the default focus outline */
+/* Base styles for the range input */
+input[type="range"] {
+  width: 100%;
+  height: 10px;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background-color: transparent;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
-/* Change the track color as the user changes the input value */
-#customRange3::-moz-range-progress {
-    background-color: #007bff;
+/* Styling the track (the background of the slider) */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #f1f1f1;
+  height: 10px;
+  border-radius: 5px;
 }
 
-#customRange3::-webkit-slider-runnable-track {
-    background-color: #007bff;
+/* Styling the thumb (the draggable handle) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  box-shadow: -1000px 0 0 1000px #007bff;
 }
 
-/* Hide the default tick marks */
-#customRange3::-moz-range-track {
-    border: none;
+/* Styling the thumb on different browsers */
+input[type="range"]::-moz-range-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
 }
 
-#customRange3::-ms-track {
-    border: none;
+input[type="range"]::-ms-thumb {
+  width: 0;
+  height: 0;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
 }
-
-#customRange3::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 0; /* Set the width of the thumb to 0 to hide it */
-  }
-
-  #customRange3::-moz-range-thumb {
-    width: 0;
-  }
-
 .res-opacity-background {
-    background-color: rgba(255, 255, 255, 0.75);
-    border-radius: 24px;
-    padding-top: 50px;
-    padding-bottom: 50px;   
-
-  }
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 24px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
 
 .res-button {
-    display: block;
-    width: 200px;
-    margin: 70px auto;
-    position: relative;
-    border-radius: 24px;
-    --background-color: black;
-    --border-size: 2px;
-  }
+  display: block;
+  width: 200px;
+  margin: 70px auto;
+  position: relative;
+  border-radius: 24px;
+  --background-color: black;
+  --border-size: 2px;
+}
 
 .res-privacy-rating {
-    font-size: 32px;
-    position: relative;
-    top: 30px;
-    right: 200px;
+  font-size: 32px;
+  position: relative;
+  top: 30px;
+  right: 200px;
 }
 
 .res-safety-score {
-    font-size: 32px;
-    position: relative;
-    left: 200px;
-    bottom: 41px;
+  font-size: 32px;
+  position: relative;
+  left: 200px;
+  bottom: 41px;
 }
 
 .modal-container {
-    padding-top: 200px;
+  padding-top: 200px;
 }
-  
-  
-
-
-  
-  
-
