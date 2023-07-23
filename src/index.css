@@ -102,25 +102,21 @@ code {
 */
 
 .button-container-primary {
-  background-image: url(./Assets/baguette.jpg);
+  background-image: url(./Assets/baugette.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   width: 400px;
   height: 200px;
   margin: 50px auto;
   position: relative;
+  padding: 20px;
   border-radius: 24px;
   background-color: rgba(255, 255, 255, 0); 
-  --font-size: 48px;
+  font-size: 32px;
+  padding-top:60px;
+  bottom: 100px;
+  font-family: 'Poppins'
 }
-
-
-
-
-
-
-
-
 
 
 /*
@@ -193,6 +189,7 @@ code {
   right: calc(var(--border-size) * -3);
   bottom: calc(var(--border-size) * -3);
 }
+
 button {
   display: block;
   cursor: pointer;
@@ -206,6 +203,7 @@ button {
   background: #cccccc;
   transition-duration: 0.4s;
 }
+
 
 #preloader {
   position: fixed;
