@@ -7,6 +7,7 @@ import axios from "axios";
 import ErrorMessage from "../ErrorMessage";
 import errorUtils from "../errorUtils";
 import { useNavigate } from "react-router-dom";
+import LoadingSpinner from "./Loader";
 
 //TODO: send to db
 
@@ -16,6 +17,7 @@ const Upload = ({ onResponseArrayChange }) => {
   const [c_input, setC] = useState("");
   const [responseArray, setResponseArray] = useState([]);
   const [error, setError] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const [company, setCompany] = useState("");
   const [steps, setSteps] = useState([]);
@@ -38,6 +40,7 @@ const Upload = ({ onResponseArrayChange }) => {
   };
 
   const getSummary = async () => {
+    setIsLoading(true);
     const res = await openai.createChatCompletion({
       model: "gpt-3.5-turbo",
       messages: [
@@ -155,6 +158,8 @@ const Upload = ({ onResponseArrayChange }) => {
 
           console.log("Done with upload.");
 
+          setIsLoading(false);
+
           handleClick();
         } catch (error) {
           setError(error.response.data.message);
@@ -224,10 +229,13 @@ const Upload = ({ onResponseArrayChange }) => {
     <Container
       fluid
       className="upload-background">
+
+{isLoading ? <LoadingSpinner /> : console.log("waiting")}
       <div>
         <Row>
           <Col>
             <Container className="upload-content">
+            
               <div className="white-bg d-flex flex-column justify-content-center align-items-center">
                 <TypeTwo />
                 <div className="choose-file-container">
