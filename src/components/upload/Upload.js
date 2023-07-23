@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import * as pdfjsLib from "pdfjs-dist";
 import { Container, Row, Col } from "react-bootstrap";
-import './upload.css';
-import TypeTwo from './TypeTwo.js'
-import axios from 'axios';
-import ErrorMessage from '../ErrorMessage';
-import errorUtils from '../errorUtils';
+import "./upload.css";
+import TypeTwo from "./TypeTwo.js";
+import axios from "axios";
+import ErrorMessage from "../ErrorMessage";
+import errorUtils from "../errorUtils";
 
 //TODO: send to db
 
@@ -19,7 +19,6 @@ const Upload = ({ onResponseArrayChange }) => {
   const [company, setCompany] = useState("");
   const [steps, setSteps] = useState([]);
   var bullet1, bullet2, bullet3, bullet4, bullet5;
-
 
   const [privacyNumber, setPrivacyNumber] = useState("");
   const [opt, setOpt] = useState("");
@@ -62,6 +61,7 @@ const Upload = ({ onResponseArrayChange }) => {
 
   const optOut = async () => {
     const res = await openai.createChatCompletion({
+
         model: "gpt-3.5-turbo",
         messages: [{role: "user", content: `how can delete: ${c_input} account in less than 5 steps`}]
       });
@@ -201,8 +201,13 @@ const handleSubmit  = async (e) => {
               <div className="white-bg d-flex flex-column justify-content-center align-items-center">
                 <TypeTwo />
                 <div className="choose-file-container">
-                {error && <ErrorMessage variant = "danger" message = "Error with Upload!">{ error }</ErrorMessage>}
-                  {" "}
+                  {error && (
+                    <ErrorMessage
+                      variant="danger"
+                      message="Error with Upload!">
+                      {error}
+                    </ErrorMessage>
+                  )}{" "}
                   {/*was originally mb-3*/}
                   <input
                     className="form-control"
@@ -214,7 +219,7 @@ const handleSubmit  = async (e) => {
                 </div>
                 <button
                   type="button"
-                  className="upload-upload-button"
+                  className="upload-upload-button button-container-upload"
                   onClick={handleUpload}>
                   Upload
                 </button>
@@ -254,7 +259,7 @@ const handleSubmit  = async (e) => {
                   </label>
 
                   <button
-                    className="upload-submit-button"
+                    className="upload-submit-button button-container-upload"
                     type="submit">
                     Submit
                   </button>
