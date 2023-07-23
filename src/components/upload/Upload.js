@@ -141,35 +141,37 @@ const handleSubmit  = async (e) => {
       fluid
       className="upload-background">
       <div>
-      <Row>
-      <Col>
-      <Container className = 'upload-content'>
-     
-      
-          <TypeTwo />
-        <div className="choose-file-container"> {/*was originally mb-3*/}
-        {error && <ErrorMessage variant = "danger" message = "Error with Upload!">{ error }</ErrorMessage>}
-        <input
-          className="form-control"
-          type="file"
-          id="formFile"
-          style={{ maxWidth: "250px" }}
-          ref={fileInputRef}
-        />
-        </div>
-        <button type="button" className="upload-upload-button" onClick={handleUpload}>
-          Upload
-        </button>
-      
-      
-      </Container>
-      </Col>
+        <Row>
+          <Col>
+            <Container className="upload-content">
+              <div className="white-bg d-flex flex-column justify-content-center align-items-center">
+                <TypeTwo />
+                <div className="choose-file-container">
+                {error && <ErrorMessage variant = "danger" message = "Error with Upload!">{ error }</ErrorMessage>}
+                  {" "}
+                  {/*was originally mb-3*/}
+                  <input
+                    className="form-control"
+                    type="file"
+                    id="formFile"
+                    style={{ maxWidth: "250px", borderRadius: "10px" }}
+                    ref={fileInputRef}
+                  />
+                </div>
+                <button
+                  type="button"
+                  className="upload-upload-button"
+                  onClick={handleUpload}>
+                  Upload
+                </button>
+              </div>
+            </Container>
+          </Col>
 
-          <br></br>
           <Col>
             <Container className="upload-form-container">
-              <div>
-                <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit}>
+                <div className="white-bg d-flex flex-column justify-content-center align-items-center">
                   <label>
                     <input
                       className="upload-company-container"
@@ -188,7 +190,13 @@ const handleSubmit  = async (e) => {
                       cols="50"
                       rows="15"
                       value={input}
-                      onChange={handleInputChange}></textarea>
+                      onChange={handleInputChange}
+                      style={{
+                        borderRadius: "10px",
+                        resize: "none",
+                        padding: "12px",
+                        position: "relative",
+                      }}></textarea>
                   </label>
 
                   <button
@@ -196,8 +204,8 @@ const handleSubmit  = async (e) => {
                     type="submit">
                     Submit
                   </button>
-                </form>
-              </div>
+                </div>
+              </form>
             </Container>
           </Col>
         </Row>
