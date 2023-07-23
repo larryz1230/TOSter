@@ -25,16 +25,30 @@ code {
 }
 
 .home-section {
+  height: 100vh;
   margin: 0;
   position: relative;
   z-index: 1;
-  background-image: url(./Assets/kitchen5-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
+
+.home-section::before {
+  content: "";
+  background-image: url(./Assets/home-bg-3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.75;
+}
+
+
 .home-content {
   padding: 9rem 0 2rem !important;
   text-align: left;
@@ -54,7 +68,7 @@ code {
 }
 
 .main-name {
-  color: #f9c87c;
+  color: #ff9910;
   font-size: 64px;
   position: relative;
   top: 4px;
@@ -62,20 +76,19 @@ code {
 
 .Typewriter__wrapper {
   font-size: 32px !important; /*2.2em */
-  color: #674023 !important; /*#f9c87c */
+  color: #ff9910 !important; /*#674023 */
   font-weight: 600 !important;
   font-family: "Poppins";
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #674023 !important;
+  color: #ff9910 !important;
 }
-
+/*
 .button-container-primary {
   background-image: url(./Assets/baguette.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 1;
   width: 400px;
   height: 200px;
   margin: 50px auto;
@@ -83,30 +96,22 @@ code {
   padding: 20px;
   right: 200px;
   border-radius: 24px;
-  background-color: rgba(255, 255, 255, 0);
-  --border-size: 2px;
+  background-color: rgba(255, 255, 255, 0); 
   --font-size: 48px;
 }
+*/
 
-.button-container-primary::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+.button-container-primary {
+  background-image: url(./Assets/baguette.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 200px;
+  margin: 50px auto;
+  position: relative;
   border-radius: 24px;
-  border: var(--border-size);
-  transition: top, left, right, bottom, 100ms ease-in-out;
-}
-
-.button-container-primary:hover::before,
-.button-container-primary:focus::before {
-  top: calc(var(--font-size) * -10);
-  left: calc(var(--font-size) * -10);
-  right: calc(var(--font-size) * -10);
-  bottom: calc(var(--font-size) * -10);
+  background-color: rgba(255, 255, 255, 0); 
+  --font-size: 48px;
 }
 
 
@@ -155,41 +160,6 @@ code {
   bottom: calc(var(--border-size) * -5);
 }
 */
-
-
-.button-container-secondary {
-  display: block;
-  width: 200px;
-  margin: 70px auto;
-  position: relative;
-  padding: 20px;
-  left: 300px;
-  bottom: 270px;
-  border-radius: 24px;
-  --background-color: white;
-  --border-size: 2px;
-}
-
-.button-container-secondary::before {
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  border-radius: 24px;
-  border: var(--border-size) solid var(--background-color);
-  transition: top, left, right, bottom, 100ms ease-in-out;
-}
-
-.button-container-secondary:hover::before,
-.button-container-secondary:focus::before {
-  top: calc(var(--border-size) * -3);
-  left: calc(var(--border-size) * -3);
-  right: calc(var(--border-size) * -3);
-  bottom: calc(var(--border-size) * -3);
-}
 
 .button-container-upload {
   z-index: 1;
