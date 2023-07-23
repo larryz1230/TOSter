@@ -25,16 +25,29 @@ code {
 }
 
 .home-section {
+  height: 100vh;
   margin: 0;
   position: relative;
   z-index: 1;
-  background-image: url(./Assets/kitchen5-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
+
+.home-section::before {
+  content: "";
+  background-image: url(./Assets/home-bg-3.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+  opacity: 0.75;
+}
+
 .home-content {
   padding: 9rem 0 2rem !important;
   text-align: left;
@@ -54,7 +67,7 @@ code {
 }
 
 .main-name {
-  color: #f9c87c;
+  color: #ff9910;
   font-size: 64px;
   position: relative;
   top: 4px;
@@ -62,13 +75,13 @@ code {
 
 .Typewriter__wrapper {
   font-size: 32px !important; /*2.2em */
-  color: #674023 !important; /*#f9c87c */
+  color: #ff9910 !important; /*#674023 */
   font-weight: 600 !important;
   font-family: "Poppins";
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #674023 !important;
+  color: #ff9910 !important;
 }
 
 .button-container-primary {
